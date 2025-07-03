@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobMentor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body class="bg-gray-100 font-sans">
+ <div class="max-w-xl">
+  <h1>JobMentor</h1>
+  <textarea id="userInput" rows="5" placeholder="Kendini tanıt..."></textarea>
+
+  <div class="button-group">
+    <button onclick="generateCV()">CV Oluştur</button>
+    <button onclick="generateInterview()">Mülakat Sorusu</button>
+  </div>
+
+  <div class="voice-section">
+    <button onclick="startRecording()">Sesli Cevap</button>
+    <p id="voiceText"></p>
+  </div>
+
+  <div class="download-cv" style="margin-top: 24px;">
+    <button onclick="downloadCV()">CV'yi PDF Olarak İndir</button>
+  </div>
+
+  <div class="mt-6">
+    <h2>Sonuç:</h2>
+    <pre id="output"></pre>
+  </div>
+</div>

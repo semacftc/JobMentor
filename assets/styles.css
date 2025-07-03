@@ -1,0 +1,163 @@
+/* Genel Ayarlar */
+body {
+  background-color: #e5e7eb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* Ana Konteyner */
+.max-w-xl {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(44, 62, 80, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.max-w-xl:hover {
+  box-shadow: 0 12px 30px rgba(44, 62, 80, 0.15);
+}
+
+/* Başlık */
+h1 {
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 2.75rem;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Textarea */
+#userInput {
+  width: 93%;
+  min-height: 130px;
+  padding: 16px 20px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  border: 1.8px solid #cbd5e1;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  color: #2c3e50;
+}
+
+#userInput::placeholder {
+  color: #94a3b8;
+}
+
+#userInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+}
+
+/* Butonlar Grubu */
+.button-group {
+  display: flex;
+  gap: 20px;  /* Butonlar arası eşit aralık */
+  margin-top: 24px;
+}
+
+.button-group button,
+.voice-section button,
+.download-cv button {
+  flex: 1;
+  min-width: 130px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  background-color: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.button-group button:hover,
+.voice-section button:hover,
+.download-cv button:hover {
+  background-color: #1e40af;
+  transform: scale(1.06);
+  box-shadow: 0 6px 12px rgba(30, 64, 175, 0.4);
+}
+
+.button-group button:active,
+.voice-section button:active,
+.download-cv button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(30, 64, 175, 0.3);
+}
+
+/* Sesli Cevap Bölümü */
+.voice-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#voiceText {
+  font-style: italic;
+  color: #64748b;
+  font-size: 0.95rem;
+  max-width: 280px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Sonuç Bölümü */
+#output {
+  background-color: #e0e7ff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-size: 1rem;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1.5px solid #a5b4fc;
+  margin-top: 18px;
+  color: #3730a3;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 480px) {
+  .max-w-xl {
+    margin: 20px 15px;
+    padding: 25px 30px;
+  }
+
+  .button-group {
+    gap: 16px;
+  }
+
+  .button-group button,
+  .voice-section button,
+  .download-cv button {
+    min-width: 110px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #userInput {
+    min-height: 100px;
+  }
+
+  #voiceText {
+    max-width: 100%;
+  }
+}
